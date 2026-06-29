@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCU | Portfolio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='self-intro-style.css') }}">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <h1 class="logo">DCU</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#opinions">Opinions</a>
+        <a href="#contact">Contact</a>
+        <a href="{{ url_for('feedback') }}">Feedback</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero">
+
+    <img src="{{ url_for('static', filename='dcu.jpg') }}" alt="Profile">
+    <h2>Hello, I'm</h2>
+    <h1 class="hero-name">DCU</h1>
+    <p class="full-name">P Durga Chandra Udhaya</p>
+
+    <p>B.Sc IT (3rd Year) | Aspiring Full Stack Developer</p>
+
+    <button onclick="downloadResume()">Download Resume</button>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        Hello! I'm <b>P Durga Chandra Udhaya</b>, a B.Sc Information Technology (3rd Year) student.
+        I have completed C and C++ and currently learning Java. My next goal is Python.
+    </p>
+    <p>
+        I also have knowledge of HTML, CSS, JavaScript, Web Development, Full Stack Development
+        and basic UI/UX Design. I am a quick learner with good communication skills.
+        My aim is to become a professional Full Stack Developer.
+    </p>
+</section>
+
+<!-- HOW I TEACH -->
+<section id="teaching">
+    <h2>How I Teach</h2>
+
+    <div class="cards">
+        <div>
+            <i class="fa-solid fa-clock fa-lg"></i>
+            <h3>Patience First</h3>
+            <p>I never rush an explanation. If a concept doesn't click the first time, I break it down step by step until it does.</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-lightbulb fa-lg"></i>
+            <h3>Real-Life Examples</h3>
+            <p>I connect coding concepts to everyday situations, so logic feels familiar instead of abstract.</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-handshake fa-lg"></i>
+            <h3>Friendly & Approachable</h3>
+            <p>No question is a "silly" question. My friends and juniors know they can ask me anything, anytime.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="cards">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <div>Java</div>
+        <div>C</div>
+        <div>C++</div>
+        <div>Python (Learning)</div>
+        <div>MySQL</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Built using HTML, CSS, JavaScript.</p>
+    </div>
+
+    <div class="project">
+        <h3>Student Management System</h3>
+        <p>Java + MySQL based project.</p>
+    </div>
+
+    <div class="project">
+        <h3>Human Following Robot</h3>
+        <p>
+            Smart robot that follows a human using sensors and avoids obstacles.
+        </p>
+
+        <a href="https://github.com/durgachandraudhaya/madhumitha.git" target="_blank">
+            <i class="fab fa-github"></i> GitHub Project
+        </a>
+    </div>
+</section>
+
+<!-- OPINIONS -->
+<section id="opinions">
+    <h2>What My Friends &amp; Juniors Say</h2>
+    <p class="section-sub">Share your honest opinion about my teaching, my character, or anything you'd like to add.</p>
+
+    <form id="opinionForm" class="opinion-form">
+        <input type="text" id="opName" placeholder="Your Name" required>
+
+        <select id="opRole" required>
+            <option value="" disabled selected>You are my...</option>
+            <option value="Friend">Friend</option>
+            <option value="Junior">Junior</option>
+            <option value="Classmate">Classmate</option>
+        </select>
+
+        <textarea id="opText" placeholder="Your opinion..." required></textarea>
+
+        <button type="submit">Submit Opinion</button>
+    </form>
+
+    <div id="opinionsList" class="cards opinions-list"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+
+    <p>Email: pdurgachandraudhaya@gmail.com</p>
+    <p>Phone: +91 9360687741</p>
+
+    <p>
+        <a href="https://github.com/durgachandraudhaya" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/dharshini-k-962b033b6" target="_blank">LinkedIn</a> |
+        <a href="https://www.instagram.com/wtf_hakunamatata?igsh" target="_blank">Instagram</a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 DCU | All Rights Reserved</p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="{{ url_for('static', filename='self-intro-script.js') }}"></script>
+
+</body>
+</html>
